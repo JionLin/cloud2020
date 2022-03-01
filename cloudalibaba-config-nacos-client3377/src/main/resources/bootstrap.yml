@@ -1,4 +1,4 @@
-# nacos配置
+# nacos配置 存在namespace 和group概念
 server:
   port: 3377
 
@@ -12,3 +12,5 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml
+#        group: DEV_GROUP
+        group: TEST_GROUP
