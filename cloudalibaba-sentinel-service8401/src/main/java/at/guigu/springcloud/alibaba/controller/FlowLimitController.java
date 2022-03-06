@@ -1,9 +1,12 @@
 package at.guigu.springcloud.alibaba.controller;
 
 import at.guigu.springcloud.alibaba.service.FlowLimitService;
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.TimeUnit;
@@ -24,6 +27,8 @@ public class FlowLimitController {
 
     @GetMapping("/testA")
     public String testA() {
+        log.info("测试异常比例....");
+        int i=10/0;
         return "------testA";
     }
 
@@ -40,8 +45,6 @@ public class FlowLimitController {
 
     @GetMapping("/testc")
     public String testc() {
-
-
         return flowLimitService.testc();
     }
 
@@ -50,4 +53,18 @@ public class FlowLimitController {
         return flowLimitService.testc();
     }
 
+
+    @GetMapping("/testHotKey")
+//    @SentinelResource(value = "testHotKey",blockHandler = "deal_testHotKey")
+    @SentinelResource(value = "testHotKey")
+    public String testHotKey(@RequestParam(value = "p1",required = false) String p1,
+                             @RequestParam(value = "p2",required = false) String p2)
+    {
+        //int age = 10/0;
+        return "------testHotKey";
+    }
+    public String deal_testHotKey (String p1, String p2, BlockException exception)
+    {
+        return "------deal_testHotKey,o(╥﹏╥)o";  //sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
+    }
 }
