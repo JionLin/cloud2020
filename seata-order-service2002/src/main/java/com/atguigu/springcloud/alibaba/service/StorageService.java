@@ -1,4 +1,4 @@
-package com.atguigu.springcloug.alibaba.service;
+package com.atguigu.springcloud.alibaba.service;
 
 /**
  * @author johnny

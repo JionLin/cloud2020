@@ -1,4 +1,4 @@
-package com.atguigu.springcloug.alibaba.config;
+package com.atguigu.springcloud.alibaba.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;

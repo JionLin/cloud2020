@@ -1,4 +1,4 @@
-package com.atguigu.springcloug.alibaba.dao;
+package com.atguigu.springcloud.alibaba.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

@@ -1,4 +1,4 @@
-package com.atguigu.springcloug.alibaba.domain;
+package com.atguigu.springcloud.alibaba.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
