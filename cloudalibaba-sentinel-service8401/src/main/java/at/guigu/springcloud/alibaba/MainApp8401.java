@@ -1,17 +1,9 @@
 package at.guigu.springcloud.alibaba;
 
-import com.sun.org.apache.regexp.internal.RE;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.codec.binary.Hex;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.security.MessageDigest;
 
 /**
  * @author johnny
@@ -22,8 +14,7 @@ import java.security.MessageDigest;
 @Slf4j
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MainApp8401
-{
+public class MainApp8401 {
     public static void main(String[] args) {
         SpringApplication.run(MainApp8401.class, args);
 
@@ -72,4 +63,5 @@ public class MainApp8401
 //        return encdeStr;
 //    }
 
+    }
 }
