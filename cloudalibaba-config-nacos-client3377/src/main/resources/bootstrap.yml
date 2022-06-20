@@ -14,4 +14,4 @@ spring:
         file-extension: yaml
 #        group: DEV_GROUP
         group: TEST_GROUP
-        namespace: cbf4f738-3415-4ba4-ac86-dcb9216ad335
+        namespace: cbf4f738-3415-4ba4-ac86-dcb9216ad335   
